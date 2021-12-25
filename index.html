@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account information</title>
+    <link rel="stylesheet" href="styles.css"></link>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container__global">
+        <section class="accinfo__section">
+            <div class="accinfo__section--title">
+                <img src="./icons/account_information/accinfo.svg" class="accinfo__section icon" alt="Account information icon"></img>
+                <h1 class="accinfo--heading1">Account Information</h1>
+            </div>
+            <div class="accinfo__section--contents-wrapper">
+                <div class="accinfo__section--contents-inner">
+                    <table class="accinfo__section--contents">
+                        <tr class="accinfo__contents--table-row">
+                            <th class="accinfo__contents--item">Account number</th>
+                            <td class="accinfo__contents--data">10964978</td>
+                        </tr>
+                        <tr class="accinfo__contents--table-row">
+                            <th class="accinfo__contents--item">Registration date</th>
+                            <td class="accinfo__contents--data"> <time datetime="2016-12-18T09:00">Dec 18, 2016 at 09:00 am</time></td>
+                        </tr>
+                        <tr class="accinfo__contents--table-row">
+                            <th class="accinfo__contents--item">Last login</th>
+                            <td class="accinfo__contents--data"> <time datetime="2016-12-18T09:00">Dec 18, 2016 at 09:00 am</time></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+<!-- /.Account Information -->
+
+        <section class="stats__section">
+            <div class="stats__section--title">
+                <h2 class="stats--heading2">Document Statistics</h2>
+                <a class="joblist--wrapper" href="#JobList">
+                    <h3 class="heading--joblist">Job list</h3>
+                    <img src="./icons/document_stats/joblist-arrow.svg" alt="Joblist link"></img>
+                </a>
+            </div>
+            <div class="stats__section--contents">
+                <div class="contents__card">
+                    <div class="contents__card--inner">
+                        <img src="./icons/document_stats/stats-item_icon1.svg" alt="Statistics icon" class="card--icon">
+                        <h4 class="card--heading">Documents</h4>
+                        <p class="card--number">1234</p>
+                    </div>
+                </div>
+                <div class="contents__card">
+                    <div class="contents__card--inner">
+                        <img src="./icons/document_stats/stats-item_icon2.svg" alt="Statistics icon" class="card--icon">
+                        <h4 class="card--heading">SignNow</h4>
+                        <p class="card--number">1234</p>
+                    </div>
+                </div>
+                <div class="contents__card">
+                    <div class="contents__card--inner">
+                        <img src="./icons/document_stats/stats-item_icon3.svg" alt="Statistics icon" class="card--icon">
+                        <h4 class="card--heading">Shared</h4>
+                        <p class="card--number">1234</p>
+                    </div>
+                </div>
+                <div class="contents__card">
+                    <div class="contents__card--inner">
+                        <img src="./icons/document_stats/stats-item_icon4.svg" alt="Statistics icon" class="card--icon">
+                        <h4 class="card--heading">LinkToFill</h4>
+                        <p class="card--number">1234</p>
+                    </div>
+                </div>
+                <div class="contents__card">
+                    <div class="contents__card--inner">
+                        <img src="./icons/document_stats/stats-item_icon5.svg" alt="Statistics icon" class="card--icon">
+                        <h4 class="card--heading">Faxed</h4>
+                        <p class="card--number">1234</p>
+                    </div>
+                </div>
+                <div class="contents__card">
+                    <div class="contents__card--inner">
+                        <img src="./icons/document_stats/stats-item_icon6.svg" alt="Statistics icon" class="card--icon">
+                        <h4 class="card--heading">Encrypted</h4>
+                        <p class="card--number">1234</p>
+                    </div>
+                </div>
+            </div>     
+        </section>
+<!-- /. Document Statistics -->
+
+        <section class="subscrption__section">
+            <div class="subscription__section--title">
+                <h2 class="subscription--heading2">Current Subscription</h2>
+            </div>
+            <div class="subscrption__section--contents-wrapperTop">
+                <div class="subscrption__section--contents-innerTop">
+                    <table class="subscrption__section--contents">
+                        <tr class="subscrption__section--table-row first-row">
+                            <th class="subscrption__section--item first-row">Subscription Plan</th>
+                            <td class="subscrption__section--data first-row subscription-plan">Business</td>
+                        </tr>
+                        </table>
+                        <!-- <div class="btn-center-container"><a type="button" class="button-orange-mini" disabled="disabled" href="#UpgradePlan">Upgrade Plan</a>
+                        </div> -->
+                        <div class="btn-center-container">
+                            <button id="orangeBtn" class="button-orange-mini">Upgrade Plan</button>
+                            <!-- <button id="orangeBtn" class="button-orange-large">Upgrade Plan</button>
+                            <button id="whiteBtn"  class="button-white-mini">Button</button>
+                            <button id="whiteBtn"  class="button-white-large">Button</button> -->
+                            <!-- <input type="email" name="" id="email" class="email-input" placeholder="D+10964978@pdffiller.com" size="15"> -->
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="subscrption__section">
+                <div class="subscrption__section--contents-wrapper">
+                    <div class="subscrption__section--contents-innerBottom">
+                        <table class="subscrption__section--contents">
+                        <tr class="subscrption__section--table-row">
+                            <th class="subscrption__section--item">Premium Support</th>
+                            <td class="subscrption__section--data">Not activated</td>
+                        </tr>
+                        <tr class="subscrption__section--table-row">
+                            <th class="subscrption__section--item">Subscription Term</th>
+                            <td class="subscrption__section--data">1 Month Subscription</td>
+                        </tr>
+                        <tr class="subscrption__section--table-row">
+                            <th class="subscrption__section--item">Subscribed Date</th>
+                            <td class="subscrption__section--data"><time datetime="2016-12-18T09:00">Dec 18, 2016 at 09:00 am</time></td>
+                        </tr>
+                        <tr class="subscrption__section--table-row">
+                            <th class="subscrption__section--item">Automatic Renewal</th>
+                            <td class="subscrption__section--data"><time datetime="2017-12-18T09:00">Dec 18, 2017 at 09:00 am</time></td>
+                        </tr>
+                    </table>
+                   
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
