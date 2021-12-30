@@ -216,17 +216,20 @@ table {
   font-size: var(--heading1-fontsize);
   font-weight: var(--heading1-weight);
 }
-.stats--heading2 {
+.stats--heading2,
+.subscription--heading2,
+.team__section--heading2,
+.internal__email--heading2,
+.fax__number--heading2 {
   font-size: var(--heading2-fontsize);
   font-weight: var(--heading2-weight);
 }
-.subscription--heading2 {
-  font-size: var(--heading2-fontsize);
-  font-weight: var(--heading2-weight);
-}
+
 .accinfo--heading1,
 .stats--heading2,
-.subscription--heading2 {
+.subscription--heading2,
+.team__section--heading2,
+.internal__email--heading2 {
   color: var(--font-color-primary);
 }
 
@@ -234,16 +237,6 @@ table {
 .container__global {
   margin: 32px 298px 105px 298px;
 }
-
-/* section {
-  margin-bottom: var(--section-bottom-margin);
-}
-section:first-child,
-section:last-child {
-  margin-bottom: 0;
-} */
-/* -- workarounds due to messy margins 
-when creating a divider via a pseudoclass (ie .accinfo__section::after) */
 
 .accinfo__section {
   display: flex;
@@ -392,11 +385,13 @@ when creating a divider via a pseudoclass (ie .accinfo__section::after) */
   max-height: 616px;
   margin-top: 0;
 }
+
 .subscrption__section--contents-wrapper {
   background-color: var(--infopanel-bg-color);
   border-radius: 8px;
   height: 162px;
   margin-top: 2px;
+  margin-bottom: 28px;
 }
 
 .subscription__section--contents-inner {
@@ -406,19 +401,23 @@ when creating a divider via a pseudoclass (ie .accinfo__section::after) */
 .subscrption__section--contents {
   text-align: left;
 }
+
 .subscrption__section--table-row {
   line-height: 32px;
   font-size: var(--paragraph-primary-fontsize);
 }
+
 .subscrption__section--item {
   color: var(--font-color-secondary);
   width: 136px;
   padding-right: 80px;
 }
+
 .subscrption__section--data {
   color: var(--font-color-primary);
   width: 164px;
 }
+
 .subscrption__section--item,
 .subscrption__section--data,
 .subscription__section--item.first-row,
@@ -428,14 +427,20 @@ when creating a divider via a pseudoclass (ie .accinfo__section::after) */
   text-overflow: ellipsis;
 }
 
+.subscrption__section--item.first-row {
+  width: 136px;
+}
+
 .subscrption__section--contents-innerTop {
-  margin: 16px 24px 0px 24px;
+  padding: 16px 24px 16px 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+  justify-content: space-between;
 }
+
 .subscrption__section--contents-innerBottom {
-  margin: 0 24px 16px 24px;
+  padding: 16px 24px 16px 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
@@ -445,7 +450,11 @@ when creating a divider via a pseudoclass (ie .accinfo__section::after) */
   font-weight: 600;
 }
 
-/* Buttons */
+.subscrption__section--item.first-row {
+  padding-right: 80px;
+}
+
+/* Buttons and inputs */
 .button-orange-mini {
   display: flex;
   align-items: center;
@@ -556,8 +565,6 @@ when creating a divider via a pseudoclass (ie .accinfo__section::after) */
   color: var(--button-white-font-color-disabled);
 }
 
-
-
 .email-input {
   width: 256px;
   height: 32px;
@@ -566,12 +573,28 @@ when creating a divider via a pseudoclass (ie .accinfo__section::after) */
   border: 1px solid var(--email-input-border-normal);
   transition: border 150ms ease-in-out;
   color: #959595;
-  background: url(icons/internal_email/internal_email_icon.svg) no-repeat 96% 50%;
-  resize: vertical;
+  /* background: url(icons/internal_email/internal_email_icon.svg) no-repeat 96% 50%; */
+  position: relative;
+  padding-right: 30px;
 }
 
+.email-icon-button {
+  text-decoration: none;
+  background: none;
+  width: 22px;
+  height: 22px;
+  margin: 6px 6px 6px 0px;
+  border: none;
+  cursor: pointer;
+  transition: all 50ms ease-in-out;
+  padding: 1px 1px;
+  position: absolute;
+  margin-left: -26px;
+}
 
-
+.email-icon-button:hover {
+  transform: scale(1.2);
+}
 
 .email-input:hover {
   border: 1px solid var(--email-input-border-hover);
@@ -585,33 +608,187 @@ when creating a divider via a pseudoclass (ie .accinfo__section::after) */
   background-color: #f5f5f5;
   cursor: not-allowed;
 }
+.email-icon-button:disabled {
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
 #email {
   color: var(--font-color-primary);
 }
 .email-input:disabled {
   border-color: var(--infopanel-border);
 }
+/* /. Buttons and inputs */
 
-
-
-
-
-.subscrption__section--item.first-row,
-.subscrption__section--data.first-row,
-.btn-center-container {
-  padding: 16px 0px;
+/* Teammates section */
+.team__section--title {
+  margin-bottom: var(--title2-bottom-margin);
 }
 
-.subscrption__section--item.first-row {
-  padding-right: 80px;
+.team__section--wrapper {
+  height: 104px;
+  border: var(--infopanel-border) solid 1px;
+  border-radius: 4px;
 }
 
-/* tr.subscrption__section--table-row.subscription-plan::after {
-  content: "";
-  height: 5px;
-  color: #414141;
-  background-color: #414141;
-  z-index: 100;
-  width: 100%;
+.team__section--inner {
+  padding: 16px 24px 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team__section--contents-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.team__section--shared-accounts {
+  color: var(--font-color-primary);
+  font-size: var(--heading2-fontsize);
+  font-weight: var(--heading2-weight);
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+
+.team__section--item {
+  color: var(--font-color-secondary);
+  line-height: var(--title2-line-height);
+  font-size: var(--heading2-fontsize);
+}
+
+.progress-ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.progress-ring svg {
+  transform: rotate(-90deg);
+}
+
+.circle-number {
   position: absolute;
-} */
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.circle-bg,
+.circle-hero {
+  position: absolute;
+  fill: none;
+  stroke-width: 8;
+  stroke-dasharray: 200;
+  stroke-linecap: round;
+}
+
+.circle-bg {
+  stroke-dashoffset: 0;
+  stroke: var(--document-bg-color);
+}
+
+.circle-hero {
+  stroke-dashoffset: calc(200 - (200 * 75) / 100);
+  stroke: #5ec08c;
+}
+/* /. My Teammates */
+
+.internal__email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--infopanel-border);
+  border-bottom: 1px solid var(--infopanel-border);
+  height: 108px;
+  margin-top: 32px;
+}
+
+.internal__email--heading2 {
+  margin-bottom: 8px;
+  line-height: var(--title2-line-height);
+}
+
+.internal__email--text {
+  font-size: var(--paragraph-secondary-fontsize);
+  line-height: 16px;
+  color: #6b6b6b;
+  width: 320px;
+  height: 32px;
+}
+/* /. Internal Email */
+
+.fax__number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 92px;
+}
+
+.fax__number--heading2 {
+  line-height: var(--title2-line-height);
+}
+
+.fax__number--text {
+  font-size: var(--paragraph-secondary-fontsize);
+  line-height: 16px;
+  color: #6b6b6b;
+  width: 312px;
+  height: 16px;
+}
+
+.fax__number--title-wrapper {
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 164px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.tooltip-icon {
+  /* position: relative; */
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  overflow: visible;
+  background-color: #414141;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 16px;
+  border-radius: 4px;
+  position: absolute;
+  transform: translateX(-40%) translateY(-220%);
+  transition: all 150ms ease-out;
+}
+
+.tooltip-text:after {
+  content: "";
+  position: absolute;
+  border: 10px solid #000;
+  border-color: #414141 transparent transparent transparent;
+  left: 100%;
+  top: 50%;
+  transform: translateX(-207%) translateY(70%);
+  z-index: -1;
+}
+
+.tooltip-icon:hover + .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-40%) translateY(-200%);
+}
