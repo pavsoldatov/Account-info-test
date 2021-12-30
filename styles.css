@@ -233,11 +233,14 @@ table {
   color: var(--font-color-primary);
 }
 
-/* Page-specific styling */
+/* Container */
 .container__global {
   margin: 32px 298px 105px 298px;
 }
 
+/* Page-specific styling */
+
+/* Account Information */
 .accinfo__section {
   display: flex;
   flex-direction: column;
@@ -263,7 +266,7 @@ table {
 }
 
 .accinfo__section--contents-inner {
-  margin: 12px 212px 12px 24px;
+  padding: 12px 212px 12px 24px;
 }
 
 /* Account contents via tables */
@@ -297,6 +300,7 @@ table {
   margin-bottom: 24px;
   margin-top: 32px;
 }
+/* /. Account Information */
 
 /* Statistics section */
 .stats__section {
@@ -351,7 +355,7 @@ table {
 }
 
 .contents__card--inner {
-  margin: 12px 16px 12px 12px;
+  padding: 12px 16px 12px 12px;
 }
 
 .card--icon {
@@ -392,10 +396,6 @@ table {
   height: 162px;
   margin-top: 2px;
   margin-bottom: 28px;
-}
-
-.subscription__section--contents-inner {
-  margin: 12px 212px 12px 24px;
 }
 
 .subscrption__section--contents {
@@ -453,6 +453,7 @@ table {
 .subscrption__section--item.first-row {
   padding-right: 80px;
 }
+/* /.Statistics Section */
 
 /* Buttons and inputs */
 .button-orange-mini {
