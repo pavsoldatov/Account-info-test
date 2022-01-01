@@ -1,3 +1,3 @@
 <svg class="progress-ring" width="72" height="72">
-  <circle class="progress-ring__circle" stroke="#5EC08C" stroke-width="8" fill="transparent" r="32" cx="36" cy="36"/>
+  <circle class="progress-ring__circle" stroke="#5EC08C" stroke-width="8" fill="transparent" r="31" cx="36" cy="36"/>
 </svg>
