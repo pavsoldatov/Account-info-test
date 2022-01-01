@@ -280,11 +280,13 @@ table {
 .accinfo__contents--item {
   color: var(--font-color-secondary);
   width: 136px;
+  max-width: 136px;
   padding-right: 80px;
 }
 .accinfo__contents--data {
   color: var(--font-color-primary);
   width: 164px;
+  max-width: 164px;
 }
 .accinfo__contents--item,
 .accinfo__contents--data {
@@ -410,25 +412,28 @@ table {
 .subscrption__section--item {
   color: var(--font-color-secondary);
   width: 136px;
+  max-width: 136px;
   padding-right: 80px;
 }
 
 .subscrption__section--data {
   color: var(--font-color-primary);
   width: 164px;
+  max-width: 164px;
 }
 
 .subscrption__section--item,
 .subscrption__section--data,
 .subscription__section--item.first-row,
 .subscrption__section--data.first-row.subscription-plan {
-  white-space: pre-wrap;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .subscrption__section--item.first-row {
   width: 136px;
+  max-width: 136px;
 }
 
 .subscrption__section--contents-innerTop {
