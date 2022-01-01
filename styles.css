@@ -729,6 +729,7 @@ table {
 
 .fax__number--heading2 {
   line-height: var(--title2-line-height);
+  color: var(--font-color-primary);
 }
 
 .fax__number--text {
