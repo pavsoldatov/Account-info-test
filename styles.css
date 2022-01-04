@@ -235,7 +235,9 @@ table {
 
 /* Container */
 .container__global {
-  margin: 32px 298px 105px 298px;
+  max-width: 616px;
+  max-height: 1066px;
+  margin: 32px auto 105px auto;
 }
 
 /* Page-specific styling */
@@ -345,7 +347,6 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 12px;
   flex-wrap: wrap;
 }
 
